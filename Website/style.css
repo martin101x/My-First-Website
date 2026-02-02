@@ -1,5 +1,69 @@
+/* 1. Type selector (for body) - line 1 */
 body {
-  background-color: rgb(45, 118, 179);
+    background-color: rgb(45, 118, 179); /* color requirement */
+    font-family: Arial, sans-serif; 
+    font-size: 1rem; 
+    color: rgb(255, 255, 255);
+    line-height: 1.5; 
+    margin: 0;
+    padding: 0;
+}
+
+/* 2. Class selector (for batman image) - line 11 */
+.batman {
+    width: 18em; /* relative unit */
+    margin-top: 1em;
+    border: 0.2em solid rgb(43, 197, 184); /* optional border maybe change in the future (maybe) */
+}
+
+/* 3. Relational selector (img inside main) - line 19 */
+main img {
+    display: block;
+    margin-bottom: 1.5em;
+}
+
+/* 4. Combination selector (h1 + p) - line 25 */
+h1 + p {
+    font-size: 1.2rem; /* relative unit */
+    color: rgb(230, 230, 230); /* font color */
+}
+
+/* 5. super-car selector (link to Koenigsegg) - line 30 */
+a[href*="koenigsegg"] {
+    text-decoration: none;
+    color: #FFD700; /* gold color using hex */
+}
+
+/* Other images using etc. */
+.jog {
+    width: 18em;
+    margin-top: 1em;
+}
+
+.swim {
+    width: 14em;
+    margin-top: 1.25em;
+}
+
+.koenigsegg {
+    width: 15em;
+    margin-top: 1em;
+}
+
+.Buggatti {
+    width: 15em;
+    margin-top: 1em;
+}
+
+.Lamborghini {
+    width: 18em;
+    margin-top: 1em;
 }
 
 
+footer p {
+    font-size: 0.9rem; /* relative unit */
+    color: rgb(200, 200, 200);
+    text-align: center;
+    padding: 1em 0;
+}
