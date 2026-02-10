@@ -7,6 +7,17 @@ body {
     line-height: 1.5; 
     margin: 0;
     padding: 0;
+    body {
+    background: linear-gradient(
+        135deg,
+        rgb(45, 118, 179),
+        rgb(20, 60, 100)
+    );
+    font-family: Arial, sans-serif;
+    color: white;
+    margin: 0;
+}
+
 }
 
 /* 2. Class selector (for batman image) - line 11 */
@@ -20,6 +31,14 @@ body {
 main img {
     display: block;
     margin-bottom: 1.5em;
+    main img {
+    padding: 0.75em;
+    margin-bottom: 1.5em;
+    border: 3px solid rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
 }
 
 /* 4. Combination selector (h1 + p) - line 25 */
@@ -46,17 +65,17 @@ a[href*="koenigsegg"] {
 }
 
 .koenigsegg {
-    width: 15em;
+    
     margin-top: 1em;
 }
 
 .Buggatti {
-    width: 15em;
+   
     margin-top: 1em;
 }
 
 .Lamborghini {
-    width: 18em;
+   
     margin-top: 1em;
 }
 
@@ -67,3 +86,49 @@ footer p {
     text-align: center;
     padding: 1em 0;
 }
+/* Main content spacing */
+main {
+    max-width: 900px;
+    margin: 2em auto;      /* centers content */
+    padding: 2em;          /* inner spacing */
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 10px;
+}
+
+/* Heading spacing */
+h1, h2 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+/* Paragraph spacing */
+p {
+    margin-bottom: 1.25em;
+}
+
+/* List spacing */
+ul {
+    margin-bottom: 2em;
+    padding-left: 1.5em;
+}
+/* 3-column layout for second page */
+.columns {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2em;
+}
+
+/* Column styling */
+.columns section {
+    padding: 1.5em;
+    background-color: rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    text-align: center;
+}
+/* ""Shared"" car image sizing */
+.car-image {
+    width: 15em;
+    margin-top: 1em;
+}
+
+
