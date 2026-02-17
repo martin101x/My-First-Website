@@ -78,7 +78,12 @@ a[href*="koenigsegg"] {
    
     margin-top: 1em;
 }
-
+/* Makes images scalable and responsive */
+main img {
+    width: 100%;       /* Image scales with container */
+    max-width: 400px;  /* Prevents being too large */
+    height: auto;      /* Maintains aspect ratio */
+}
 
 footer p {
     font-size: 0.9rem; /* relative unit */
@@ -131,4 +136,49 @@ ul {
     margin-top: 1em;
 }
 
+/* Make all car images same size (Front page/ fit for car.html) */
+.koenigsegg,
+.Buggatti,
+.Lamborghini {
+    width: 15em;
+    height: auto;
+}
+
+/*NEW SECTION*/
+/* Horizontal Navigation Styling  */
+
+
+.navbar {
+    background: linear-gradient(
+        90deg,
+        rgb(20, 60, 100),
+        rgb(45, 118, 179)
+    );
+    padding: 1em 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;              /* Makes it horizontal */
+    justify-content: center;    /* Centers menu */
+    gap: 2em;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1rem;
+    padding: 0.5em 1em;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: gold;
+}
 
