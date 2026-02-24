@@ -7,83 +7,90 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <!-- Placeholder anchor for same-page navigation -->
-<a id="top"></a>
 
-<!-- Main content of the webpage -->
- <!-- Horizontal Navigation Menu -->
-<nav class="navbar">
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="car.html">Cars</a></li>
-        <li><a href="hobbies.html">Hobbies</a></li>
-        <li><a href="#top">Back to Top</a></li>
-    </ul>
-</nav>
+<!-- 
+    GRID WRAPPER
+    This wraps the entire page and will be turned into a CSS Grid layout.
+-->
+<div class="grid-container">
 
-<main>
-    <!-- About me section -->
-    <h1>About Me</h1>
-    <p>Hello! My name is Martin. This is fun facts about me.</p>
+    <!-- FLEX CONTAINER #1: Navigation Bar -->
+    <nav class="navbar">
+        <div class="logo">Martin's Website</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="car.html">Cars</a></li>
+            <li><a href="hobbies.html">Hobbies</a></li>
+            <li><a href="#top">Back to Top</a></li>
+        </ul>
+    </nav>
 
-    <!-- Hobbies list -->
-    <h2>My Hobbies</h2>
-    <ul>
-        <li>Reading comics</li>
-        <li>My favorite comic book hero is Batman</li>
-        <li>Exercising (jogging)</li>
-        <li>Swimming</li>
-    </ul>
+    <!-- MAIN CONTENT AREA -->
+    <main class="main-content">
 
-    <!--Batman image-->
-    <img src="batman.jpeg" alt="Batman comic image" class="batman">
+        <!-- About Me Section -->
+        <section>
+            <h1>About Me</h1>
+            <p>Hello! My name is Martin. This is fun facts about me.</p>
+        </section>
 
+        <!-- Hobbies Section -->
+        <section>
+            <h2>My Hobbies</h2>
+            <ul>
+                <li>Reading comics</li>
+                <li>My favorite comic book hero is Batman</li>
+                <li>Exercising (jogging)</li>
+                <li>Swimming</li>
+            </ul>
 
-    <!--person jogging image-->
-    <img src="jog.jpg" alt="jogging image" class="jog">
+            <!-- FLEX CONTAINER #2: Hobby Images -->
+            <div class="image-row">
+                <img src="batman.jpeg" alt="Batman comic image">
+                <img src="jog.jpg" alt="jogging image">
+                <img src="swim.jpg" alt="swim image">
+            </div>
+        </section>
 
+        <!-- Cars Section -->
+        <section>
+            <h2>Favorite Cars</h2>
+            <ul>
+                <li>Koenigsegg Agera</li>
+                <li>Bugatti Veyron</li>
+                <li>Lamborghini Centenario</li>
+            </ul>
 
-    <!--swimming image-->
-    <img src="swim.jpg" alt="swim image" class="swim">
+            <!-- FLEX CONTAINER #3 -->
+            <div class="image-row">
+                <img src="koenigsegg-agera.jpg" alt="Koenigsegg Agera Car Photo">
+                <img src="Bugatti Veyron.jpg" alt="Bugatti Veyron car Photo">
+                <img src="Centenario lamborghini.jpg" alt="Lamborghini car Photo">
+            </div>
 
-    <!-- Favorite cars part -->
-    <h2>Favorite Cars</h2>
-    <ul>
-        <li>Koenigsegg Agera</li>
-        <li>Bugatti Veyron</li>
-        <li>Lamborghini centenario</li>
-    </ul>
+            <p>
+                Check out more about Koenigsegg cars
+                <a href="https://www.koenigsegg.com" target="_blank">here</a>.
+            </p>
 
-    <!--The Cars images -->
-    <img src="koenigsegg-agera.jpg" alt="Koenigsegg Agera Car Photo" class="koenigsegg">
-    <img src="Bugatti Veyron.jpg" alt="Bugatti Veyron car Photo" class="Buggatti">
-    <img src="Centenario lamborghini.jpg" alt="Lamborghini car Photo" class="Lamborghini">
+            <p>
+                Visit the official Batman website
+                <a href="https://www.dc.com/characters/batman"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                   here
+                </a>.
+            </p>
+        </section>
 
-    <!-- links example (future links to be added) -->
-    <p>Check out more about Koenigsegg cars <a href="https://www.koenigsegg.com" target="_blank">here</a>.</p>
-    <p>Check out more about the Buggatti cars <a href="https://www.bugatti.com" target="_blank">here</a></p>
-    <!-- External link that opens in a NEW browser tab -->
-<p>
-    Visit the official Batman website
-    <a href="https://www.dc.com/characters/batman"
-       target="_blank"
-       rel="noopener noreferrer">
-       here
-    </a>.
-</p>
-    <!-- New "seperate" type of link/page-->
-     <p>
-    View my favorite cars page
-    <a href="car.html">here</a>.
-</p>
+    </main>
 
+    <!-- Footer -->
+    <footer class="footer">
+        <p>&copy; 2026 My First Website. By Martin Bauzon - All Rights Reserved</p>
+    </footer>
 
-</main>
-
-<!-- Footer section with a "character entity" -->
-<footer>
-    <p>&copy; 2026 My First Website. By Martin Bauzon - All Rights Reserved</p>
-</footer>
+</div>
 
 </body>
 </html>

@@ -1,13 +1,9 @@
-/* 1. Type selector (for body) - line 1 */
+/* ===============================
+   GLOBAL PAGE STYLING
+   =============================== */
+
+/* Body styling + gradient background */
 body {
-    background-color: rgb(45, 118, 179); /* color requirement */
-    font-family: Arial, sans-serif; 
-    font-size: 1rem; 
-    color: rgb(255, 255, 255);
-    line-height: 1.5; 
-    margin: 0;
-    padding: 0;
-    body {
     background: linear-gradient(
         135deg,
         rgb(45, 118, 179),
@@ -18,150 +14,46 @@ body {
     margin: 0;
 }
 
+/* ===============================
+   GRID LAYOUT (Requirement: 1 Grid)
+   =============================== */
+
+/* Full page grid structure */
+.grid-container {
+    display: grid;
+    grid-template-rows: auto 1fr auto; /* nav, content, footer */
+    min-height: 100vh; /* Ensures full viewport height */
 }
 
-/* 2. Class selector (for batman image) - line 11 */
-.batman {
-    width: 18em; /* relative unit */
-    margin-top: 1em;
-    border: 0.2em solid rgb(43, 197, 184); /* optional border maybe change in the future (maybe) */
-}
-
-/* 3. Relational selector (img inside main) - line 19 */
-main img {
-    display: block;
-    margin-bottom: 1.5em;
-    main img {
-    padding: 0.75em;
-    margin-bottom: 1.5em;
-    border: 3px solid rgba(255, 255, 255, 0.6);
-    border-radius: 12px;
-    background-color: rgba(0, 0, 0, 0.3);
-}
-
-}
-
-/* 4. Combination selector (h1 + p) - line 25 */
-h1 + p {
-    font-size: 1.2rem; /* relative unit */
-    color: rgb(230, 230, 230); /* font color */
-}
-
-/* 5. super-car selector (link to Koenigsegg) - line 30 */
-a[href*="koenigsegg"] {
-    text-decoration: none;
-    color: #FFD700; /* gold color using hex */
-}
-
-/* Other images using etc. */
-.jog {
-    width: 18em;
-    margin-top: 1em;
-}
-
-.swim {
-    width: 14em;
-    margin-top: 1.25em;
-}
-
-.koenigsegg {
-    
-    margin-top: 1em;
-}
-
-.Buggatti {
-   
-    margin-top: 1em;
-}
-
-.Lamborghini {
-   
-    margin-top: 1em;
-}
-/* Makes images scalable and responsive */
-main img {
-    width: 100%;       /* Image scales with container */
-    max-width: 400px;  /* Prevents being too large */
-    height: auto;      /* Maintains aspect ratio */
-}
-
-footer p {
-    font-size: 0.9rem; /* relative unit */
-    color: rgb(200, 200, 200);
-    text-align: center;
-    padding: 1em 0;
-}
-/* Main content spacing */
-main {
-    max-width: 900px;
-    margin: 2em auto;      /* centers content */
-    padding: 2em;          /* inner spacing */
+/* Main content fills available space */
+.main-content {
+    max-width: 1000px;
+    margin: 2em auto;
+    padding: 2em;
     background-color: rgba(0, 0, 0, 0.25);
     border-radius: 10px;
 }
 
-/* Heading spacing */
-h1, h2 {
-    margin-top: 1.5em;
-    margin-bottom: 0.5em;
-}
-
-/* Paragraph spacing */
-p {
-    margin-bottom: 1.25em;
-}
-
-/* List spacing */
-ul {
-    margin-bottom: 2em;
-    padding-left: 1.5em;
-}
-/* 3-column layout for second page */
-.columns {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2em;
-}
-
-/* Column styling */
-.columns section {
-    padding: 1.5em;
-    background-color: rgba(0, 0, 0, 0.35);
-    border-radius: 10px;
-    text-align: center;
-}
-/* ""Shared"" car image sizing */
-.car-image {
-    width: 15em;
-    margin-top: 1em;
-}
-
-/* Make all car images same size (Front page/ fit for car.html) */
-.koenigsegg,
-.Buggatti,
-.Lamborghini {
-    width: 15em;
-    height: auto;
-}
-
-/*NEW SECTION*/
-/* Horizontal Navigation Styling  */
-
+/* ===============================
+   FLEX CONTAINER #1 - NAVIGATION
+   =============================== */
 
 .navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: linear-gradient(
         90deg,
         rgb(20, 60, 100),
         rgb(45, 118, 179)
     );
-    padding: 1em 0;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    padding: 1em 2em;
 }
 
-.navbar ul {
+/* Flex container inside navbar */
+.nav-links {
+    display: flex;
     list-style: none;
-    display: flex;              /* Makes it horizontal */
-    justify-content: center;    /* Centers menu */
     gap: 2em;
     margin: 0;
     padding: 0;
@@ -182,3 +74,122 @@ ul {
     color: gold;
 }
 
+/* ===============================
+   FLEX CONTAINER #2 - IMAGE ROWS
+   =============================== */
+
+/* Used for hobby images and car images */
+.image-row {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    flex-wrap: wrap; /* Prevents breaking on smaller screens */
+    margin-bottom: 2em;
+}
+
+/* Responsive images */
+.image-row img {
+    width: 250px;
+    height: auto;
+    border: 3px solid rgba(255, 255, 255, 0.6);
+    border-radius: 12px;
+}
+
+/* ===============================
+   TYPOGRAPHY & SPACING
+   =============================== */
+
+h1, h2 {
+    margin-top: 1.5em;
+    margin-bottom: 0.5em;
+}
+
+h1 + p {
+    font-size: 1.2rem;
+    color: rgb(230, 230, 230);
+}
+
+p {
+    margin-bottom: 1.25em;
+}
+
+ul {
+    margin-bottom: 2em;
+    padding-left: 1.5em;
+}
+
+/* ===============================
+   FOOTER
+   =============================== */
+
+.footer {
+    text-align: center;
+    padding: 1.5em;
+    background-color: rgba(0, 0, 0, 0.4);
+    font-size: 0.9rem;
+    color: rgb(200, 200, 200);
+}
+
+/* ===============================
+   MEDIA QUERIES (Requirement)
+   =============================== */
+
+/* Tablet breakpoint */
+@media (max-width: 900px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .main-content {
+        margin: 1em;
+        padding: 1.5em;
+    }
+}
+
+/* Mobile breakpoint */
+@media (max-width: 600px) {
+
+    /* Stack navigation vertically */
+    .nav-links {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    /* Stack images vertically */
+    .image-row {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .image-row img {
+        width: 90%; /* Prevents overflow */
+        max-width: 350px;
+    }
+
+    .main-content {
+        padding: 1em;
+    }
+}
+
+/* Extra small screens (~360px requirement) */
+@media (max-width: 400px) {
+
+    .navbar a {
+        font-size: 1rem;
+        padding: 0.4em;
+    }
+
+    h1 {
+        font-size: 1.6rem;
+    }
+
+    h2 {
+        font-size: 1.3rem;
+    }
+}
